@@ -1,0 +1,19 @@
+.contacts-list-table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    border-radius: 1px;
+    border-spacing: 0 10px;
+
+    th:nth-child(3){
+        text-align: right;
+    }
+
+    td,th {
+        padding: 0.5rem 1rem;
+    }
+
+    td {
+        border-bottom: 1px solid #b9b9b9;
+    }
+}
