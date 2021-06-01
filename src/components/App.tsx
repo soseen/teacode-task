@@ -41,7 +41,7 @@ const App: React.FC = () => {
 
   const [ pageCount, filteredContacts ]: [number, Contact[]] = useMemo(() => {
     
-    const filteredContacts = contactsData.filter(contact => contact.last_name.includes(searchQuery)).sort((a,b) => a.last_name.localeCompare(b.last_name))
+    const filteredContacts = contactsData.filter(contact => contact.last_name.includes(searchQuery) || contact.first_name.includes(searchQuery)).sort((a,b) => a.last_name.localeCompare(b.last_name))
     const pageCount = filteredContacts.length > 0 ? Math.ceil(filteredContacts.length / USERS_PER_PAGE) : 1;
 
     if (currentPage <= pageCount) {
